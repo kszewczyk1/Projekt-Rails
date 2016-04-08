@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Species:</strong>
+  <%= @zoo.species %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @zoo.name %>
+</p>
+<% if user_signed_in? %>
+  <%= link_to 'Edit', edit_zoo_path(@zoo) %> |
+<% else  %>
+	
+<% end %>
+
+<%= link_to 'Back', zoos_path %>
