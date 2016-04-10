@@ -10,9 +10,9 @@
   <%= @zoo.name %>
 </p>
 <% if user_signed_in? %>
-  <%= link_to 'Edit', edit_zoo_path(@zoo) %> |
+  <%= link_to 'Edit', edit_zoo_path(@zoo), class: "btn btn-warning outline" %> |
 <% else  %>
 	
 <% end %>
 
-<%= link_to 'Back', zoos_path %>
+<%= link_to 'Back', zoos_path, class: "btn btn-info outline" %>

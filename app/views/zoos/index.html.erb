@@ -16,10 +16,10 @@
       <tr>
         <td><%= zoo.species %></td>
         <td><%= zoo.name %></td>
-        <td><%= link_to 'Show', zoo %></td>
+        <td><%= link_to 'Show', zoo, class: "btn btn-primary outline" %></td>
         <% if user_signed_in? %>
-          <td><%= link_to 'Edit', edit_zoo_path(zoo) %></td>
-          <td><%= link_to 'Destroy', zoo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td><%= link_to 'Edit', edit_zoo_path(zoo), class: "btn btn-warning outline" %></td>
+          <td><%= link_to 'Destroy', zoo, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger outline" %></td>
         <% else  %>
         	
         <% end %>
@@ -32,7 +32,7 @@
 
 <br>
 <% if user_signed_in? %>
-  <%= link_to 'New Specie', new_zoo_path %>
+  <%= link_to 'New Specie', new_zoo_path, class: "btn btn-success outline" %>
 <% else  %>
 	
 <% end %>
